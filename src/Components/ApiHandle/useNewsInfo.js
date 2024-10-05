@@ -7,7 +7,7 @@ export function useNewsInfo(search) {
   useEffect(() => {
     if (search) {
       // Only fetch if a search term is provided
-      fetch(URL, {mode: 'no-cors'})
+      fetch(URL, {mode: 'cors'})
         .then((response) => response.json())
         .then((result) => {
           setData(result);
